@@ -12,9 +12,9 @@ app = Flask(__name__)
 CORS(app)
 app.config['DEBUG'] = True
 
-scalarobject=bz2.BZ2File("Model\standardScalar.pkl", "rb")
+scalarobject=bz2.BZ2File("standardScalar.pkl", "rb")
 scaler=pickle.load(scalarobject)
-modelforpred = bz2.BZ2File("Model\modelForPrediction.pkl", "rb")
+modelforpred = bz2.BZ2File("modelForPrediction.pkl", "rb")
 model = pickle.load(modelforpred)
 
 ## Route for homepage
